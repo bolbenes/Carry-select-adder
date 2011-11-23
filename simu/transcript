@@ -8,29 +8,203 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim SDB_inner_tb 
-# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
 # Loading work.sdb_inner(fast)
 # Loading work.fra_basic_bl_a(fast)
 # Loading work.fra_basic_bl_b(fast)
-# ** Error: (vsim-3906) SDB_inner_tb.sv(13): Connection type is incompatible with port (a):  Can't mix packed and unpacked types.
-#         Region: /SDB_inner_tb/I_SDB_INNER_1
-# ** Error: (vsim-3906) SDB_inner_tb.sv(13): Connection type is incompatible with port (b):  Can't mix packed and unpacked types.
-#         Region: /SDB_inner_tb/I_SDB_INNER_1
-# ** Error: (vsim-3906) SDB_inner_tb.sv(13): Connection type is incompatible with port (p):  Can't mix packed and unpacked types.
-#         Region: /SDB_inner_tb/I_SDB_INNER_1
-# ** Error: (vsim-3906) SDB_inner_tb.sv(13): Connection type is incompatible with port (s):  Can't mix packed and unpacked types.
-#         Region: /SDB_inner_tb/I_SDB_INNER_1
-# ** Error: (vsim-3906) SDB_inner_tb.sv(14): Connection type is incompatible with port (a):  Can't mix packed and unpacked types.
-#         Region: /SDB_inner_tb/I_SDB_INNER_2
-# ** Error: (vsim-3906) SDB_inner_tb.sv(14): Connection type is incompatible with port (b):  Can't mix packed and unpacked types.
-#         Region: /SDB_inner_tb/I_SDB_INNER_2
-# ** Error: (vsim-3906) SDB_inner_tb.sv(14): Connection type is incompatible with port (p):  Can't mix packed and unpacked types.
-#         Region: /SDB_inner_tb/I_SDB_INNER_2
-# ** Error: (vsim-3906) SDB_inner_tb.sv(14): Connection type is incompatible with port (s):  Can't mix packed and unpacked types.
-#         Region: /SDB_inner_tb/I_SDB_INNER_2
-# Error loading design
 #  
-# Break key hit 
-# Break key hit 
+run
+# ** Error: Assertion error.
+#    Time: 1 ns  Scope: SDB_inner_tb File: SDB_inner_tb.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1 ns  Scope: SDB_inner_tb File: SDB_inner_tb.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1 ns  Scope: SDB_inner_tb File: SDB_inner_tb.sv Line: 30
+# ** Error: Assertion error.
+#    Time: 1 ns  Scope: SDB_inner_tb File: SDB_inner_tb.sv Line: 33
+vlog SDB_inner_tb.sv
+# Model Technology ModelSim SE-64 vlog 10.0d Compiler 2011.10 Oct 30 2011
+# -- Compiling module SDB_inner_tb
+# 
+# Top level modules:
+# 	SDB_inner_tb
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
+# Loading work.sdb_inner(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+run all
+# Invalid time value: all
+run -all
+# ** Error: Assertion error.
+#    Time: 1 ns  Scope: SDB_inner_tb File: SDB_inner_tb.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1 ns  Scope: SDB_inner_tb File: SDB_inner_tb.sv Line: 27
+# ERROR : les sommes ne sont pas inversé
+# 
+# ERROR : les sommes n'ont pas la bonne valeur
+# 
+vlog ../src/sdb-inner.sv
+# Model Technology ModelSim SE-64 vlog 10.0d Compiler 2011.10 Oct 30 2011
+# -- Compiling module sdb_inner
+# 
+# Top level modules:
+# 	sdb_inner
+run -all
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+run -all
+# ERROR : les retenues c1 et c2 sont différentes
+# 
+# ERROR : les retenues n'ont pas la bonne valeur
+# 
+# ERROR : les sommes ne sont pas inversé
+# 
+# ERROR : les sommes n'ont pas la bonne valeur
+# 
+vlog SDB_inner_tb.sv
+# Model Technology ModelSim SE-64 vlog 10.0d Compiler 2011.10 Oct 30 2011
+# -- Compiling module SDB_inner_tb
+# 
+# Top level modules:
+# 	SDB_inner_tb
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+vlog SDB_inner_tb.sv
+# Model Technology ModelSim SE-64 vlog 10.0d Compiler 2011.10 Oct 30 2011
+# -- Compiling module SDB_inner_tb
+# 
+# Top level modules:
+# 	SDB_inner_tb
+restart
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+run -all
+# ERROR : les retenues c1 et c2 sont différentes
+# 
+# ERROR : les retenues n'ont pas la bonne valeur
+# 
+# ERROR : les sommes ne sont pas inversé
+# 
+# ERROR : les sommes n'ont pas la bonne valeur
+# 
+vlog SDB_inner_tb.sv
+# Model Technology ModelSim SE-64 vlog 10.0d Compiler 2011.10 Oct 30 2011
+# -- Compiling module SDB_inner_tb
+# ** Error: SDB_inner_tb.sv(25): near "else": syntax error, unexpected else
+# ** Error: SDB_inner_tb.sv(28): near "else": syntax error, unexpected else
+# /comelec/softs/opt/mentor/modelsim/v10.0d/modeltech/linux_x86_64/vlog failed.
+vlog SDB_inner_tb.sv
+# Model Technology ModelSim SE-64 vlog 10.0d Compiler 2011.10 Oct 30 2011
+# -- Compiling module SDB_inner_tb
+# 
+# Top level modules:
+# 	SDB_inner_tb
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+run -all
+# ERROR : les sommes ne sont pas inversé
+# 
+# ERROR : les sommes n'ont pas la bonne valeur
+# 
+vlog SDB_inner_tb.sv
+# Model Technology ModelSim SE-64 vlog 10.0d Compiler 2011.10 Oct 30 2011
+# -- Compiling module SDB_inner_tb
+# 
+# Top level modules:
+# 	SDB_inner_tb
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+run -all
+run -all
+restart
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+# **** Error: RestartQ cmd: namespace inscope ::vsimwidgets::ViewMaster {::.view_master SourceUpdatesAfterRestart} sim
+# ****        can't read "cbstate": no such variable
+# can't read "cbstate": no such variable
+#     while executing
+# "if {$cbstate} {
+#                   set PrefSource(WarnSourceChanged) 0
+#                }"
+#     (object "::.main_pane.source.interior.cs.body.editor" method "::vsimwidgets::Srcedit::SourceCheckCompileTime" body line 81)
+#     invoked from within
+# "SourceCheckCompileTime"
+#     (object "::.main_pane.source.interior.cs.body.editor" method "::vsimwidgets::Srcedit::InitializeForDebug" body line 29)
+#     invoked from within
+# "InitializeForDebug"
+#     (object "::.main_pane.source.interior.cs.body.editor" method "::vsimwidgets::Srcedit::SourceUpdateLoadComplete" body line 52)
+#     invoked from within
+# "$srcedit SourceUpdateLoadComplete -restart"
+#     (object "::.view_master" method "::vsimwidgets::ViewMaster::SourceUpdatesAfterRestart" body line 7)
+#     invoked from within
+# "::.view_master SourceUpdatesAfterRestart sim"
+#     (in namespace inscope "::vsimwidgets::ViewMaster" script line 1)
+#     invoked from within
+# "namespace inscope ::vsimwidgets::ViewMaster {::.view_master SourceUpdatesAfterRestart} sim"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval $p $tankNamespace "
+vlog SDB_inner_tb.sv
+# Model Technology ModelSim SE-64 vlog 10.0d Compiler 2011.10 Oct 30 2011
+# -- Compiling module SDB_inner_tb
+# 
+# Top level modules:
+# 	SDB_inner_tb
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+run -all
+add wave  \
+sim:/SDB_inner_tb/I_SDB/a \
+sim:/SDB_inner_tb/I_SDB/b \
+sim:/SDB_inner_tb/I_SDB/p \
+sim:/SDB_inner_tb/I_SDB/s1 \
+sim:/SDB_inner_tb/I_SDB/s2 \
+sim:/SDB_inner_tb/I_SDB/c_out_1 \
+sim:/SDB_inner_tb/I_SDB/c_out_2
+restart
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+run
+# Causality operation skipped due to absense of debug database file

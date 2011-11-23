@@ -38,6 +38,6 @@ module sdb_inner # (parameter width = 8)
 	   fra_basic_bl_b i_fra_basic_bl_b (.a(a[i+1]), .b(b[i+1]), .p(p[i+1]), .c1(c1[i/2+1]), .c2(c2[i/2+1]), .c3(c3[i/2]), .c4(c4[i/2]), .s(s[i+1]));
 	end
    endgenerate
-   assign c_out = c1[width/2+1] & c2[width/2+1];
+   assign c_out = c1[width/2] & c2[width/2];
    
 endmodule
