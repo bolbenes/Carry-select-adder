@@ -1,26 +1,24 @@
-module duplicated_carry_select_adder_64b;
+module adder64bit_tb;
    
    localparam width = 64;
-   logic [width-1:0] a;
-   logic [width-1:0] b;
-   logic [width-1:0] pa;
-   logic [width-1:0] pb;
+   logic [width-1:0] a,b;
+   
+   logic 	     pa,pb;
    logic [width-1:0] s1, s2;
-   logic papb;
-   logic pab;
+   logic 	     papb,pab;
+   
    //logic c_in;
    //logic c_out_1, c_out_2;
    
    logic [width:0] expected_sum;
    
-   duplicated_carry_select_adder_64b #(width) I_duplicated_carry_select_adder_64b (.a(a), .b(b), .pa(pa), .pb(pb), .s(s1), .s_invert(s2), .papb(papb), .pab(pab));
+   duplicated_carry_select_adder_64b I_duplicated_carry_select_adder_64b (.a(a), .b(b), .pa(pa), .pb(pb), .s(s1), .s_invert(s2), .papb(papb), .pab(pab));
 	initial
 	  begin
 	     for(int i=0; i<1000; i++)
 	       begin
 		  a=$random();
 		  b=$random();
-		  p=a^b;
 		  pa=a[0];
 		  pb=b[0];
 		  for(int i=1; i<width; i++)

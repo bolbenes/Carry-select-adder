@@ -4,132 +4,200 @@ K3
 cModel Technology
 Z0 d/stud/users/promo13/bolbenes/221_elec/src/Carry-select-adder/simu
 T_opt
-V73maPSOA[73I1JXLz@z`G0
-Z1 04 12 4 work SDB_inner_tb fast 0
-Z2 =9-000ffe5c8ebc-4ecd4e17-446e1-3789
-Z3 o-quiet -auto_acc_if_foreign -work work
-Z4 n@_opt
-Z5 OL;O;10.0d;49
-Z6 d/stud/users/promo13/bolbenes/221_elec/src/Carry-select-adder/simu
-vfra_basic_bl_a
-Z7 DXx6 sv_std 3 std 0 22 :CP]PHbGOHGT_H:3KF`8L2
-Z8 IP4<2^mni>77A9OmPRnM5f3
-Z9 Va?R1G9hP[Gkclee5_WQc@2
+Z1 V73maPSOA[73I1JXLz@z`G0
+Z2 04 12 4 work SDB_inner_tb fast 0
+Z3 =9-000ffe5c8ebc-4ecd4e17-446e1-3789
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;10.0d;49
+Z7 d/stud/users/promo13/bolbenes/221_elec/src/Carry-select-adder/simu
+T_opt1
+VzSjDGZljW6j=lob^OGBTA3
+Z8 04 13 4 work adder64bit_tb fast 0
+Z9 =1-000ffe5c8ebc-4ecd5e04-5b9d1-3c2e
+R4
+Z10 n@_opt1
+R6
+R7
+vadder64bit_tb
+Z11 DXx6 sv_std 3 std 0 22 :CP]PHbGOHGT_H:3KF`8L2
+Z12 I``U?hNao:FIJ_^;HF`7K?2
+Z13 VGBcTh6om8JAj:AOdkNkZO2
 S1
-Z10 d/stud/users/promo13/schock/carryadder/simu
-Z11 w1322069160
-Z12 8../src/fra-basic-bl-a.sv
-Z13 F../src/fra-basic-bl-a.sv
+Z14 d/stud/users/promo13/schock/carryadder/simu
+Z15 w1322081775
+Z16 8adder64bit_tb.sv
+Z17 Fadder64bit_tb.sv
 L0 1
-Z14 OL;L;10.0d;49
+Z18 OL;L;10.0d;49
 r1
 31
-Z15 o+acc -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-Z16 !s100 i;MYCeJh5zhi2W3XMnLb]3
-Z17 !s105 fra2dbasic2dbl2da_sv_unit
-Z18 !s108 1322070052.939171
-Z19 !s107 ../src/fra-basic-bl-a.sv|
-Z20 !s90 +acc|../src/fra-basic-bl-a.sv|
+Z19 o+acc -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z20 !s105 adder64bit_tb_sv_unit
+Z21 !s90 +acc|adder64bit_tb.sv|
+Z22 !s100 zFTPBLMdIH6MN=K=OQRhz1
+!s85 0
+Z23 !s108 1322081789.592488
+Z24 !s107 adder64bit_tb.sv|
+vbasis_adder
+R11
+Z25 I<nC]:dzKlZh>7PaA2o;FH0
+Z26 V3G41g^KPGN5d6eZ8Jzbb^2
+S1
+R14
+Z27 w1322081673
+Z28 8../src/basis_adder.sv
+Z29 F../src/basis_adder.sv
+L0 1
+R18
+r1
+31
+R19
+Z30 !s105 basis_adder_sv_unit
+Z31 !s90 +acc|../src/basis_adder.sv|
+Z32 !s100 i3X0jkGn72a0z88e8gd162
+Z33 !s108 1322081685.463887
+Z34 !s107 ../src/basis_adder.sv|
+!s85 0
+vduplicated_carry_select_adder_64b
+R11
+Z35 IRSXLF^`<kzOUH4<FN_e8W3
+Z36 VYF2DN`5h2@6YHA<UTm9G=0
+S1
+R14
+Z37 w1322081570
+Z38 8../src/duplicated_carry_select_adder_64b.sv
+Z39 F../src/duplicated_carry_select_adder_64b.sv
+L0 1
+R18
+r1
+31
+R19
+Z40 !s105 duplicated_carry_select_adder_64b_sv_unit
+Z41 !s90 +acc|../src/duplicated_carry_select_adder_64b.sv|
+Z42 !s100 5MmAUGWlTAz0z>c?<8YMR2
+Z43 !s108 1322081584.789156
+Z44 !s107 ../src/duplicated_carry_select_adder_64b.sv|
+!s85 0
+vfra_basic_bl_a
+R11
+Z45 IP4<2^mni>77A9OmPRnM5f3
+Z46 Va?R1G9hP[Gkclee5_WQc@2
+S1
+R14
+Z47 w1322069160
+Z48 8../src/fra-basic-bl-a.sv
+Z49 F../src/fra-basic-bl-a.sv
+L0 1
+R18
+r1
+31
+R19
+Z50 !s100 i;MYCeJh5zhi2W3XMnLb]3
+Z51 !s105 fra2dbasic2dbl2da_sv_unit
+Z52 !s108 1322070052.939171
+Z53 !s107 ../src/fra-basic-bl-a.sv|
+Z54 !s90 +acc|../src/fra-basic-bl-a.sv|
 !s85 0
 vfra_basic_bl_b
-R7
-Z21 ITUA9U8oSWbVbk;7a?OIZ`0
-Z22 Vb65FWELcNkfY5Amb`VBkO0
-S1
-R10
 R11
-Z23 8../src/fra-basic-bl-b.sv
-Z24 F../src/fra-basic-bl-b.sv
-L0 1
+Z55 ITUA9U8oSWbVbk;7a?OIZ`0
+Z56 Vb65FWELcNkfY5Amb`VBkO0
+S1
 R14
+R47
+Z57 8../src/fra-basic-bl-b.sv
+Z58 F../src/fra-basic-bl-b.sv
+L0 1
+R18
 r1
 31
-R15
-Z25 !s100 S[Kz^:@U:dnF=NTE6QXoI2
-Z26 !s105 fra2dbasic2dbl2db_sv_unit
-Z27 !s108 1322070053.039923
-Z28 !s107 ../src/fra-basic-bl-b.sv|
-Z29 !s90 +acc|../src/fra-basic-bl-b.sv|
+R19
+Z59 !s100 S[Kz^:@U:dnF=NTE6QXoI2
+Z60 !s105 fra2dbasic2dbl2db_sv_unit
+Z61 !s108 1322070053.039923
+Z62 !s107 ../src/fra-basic-bl-b.sv|
+Z63 !s90 +acc|../src/fra-basic-bl-b.sv|
 !s85 0
 vsdb
-R7
-Z30 I@4fe[V=Sg`BGbeV_EJ3;W0
-Z31 V^k`Vb8;@PbiTB08zW;;A@1
+R11
+Z64 I@4fe[V=Sg`BGbeV_EJ3;W0
+Z65 V^k`Vb8;@PbiTB08zW;;A@1
 S1
-R10
-Z32 w1322076237
-Z33 8../src/sdb.sv
-Z34 F../src/sdb.sv
-L0 1
 R14
+Z66 w1322076237
+Z67 8../src/sdb.sv
+Z68 F../src/sdb.sv
+L0 1
+R18
 r1
 31
-R15
-Z35 !s100 <=Cg=<`n2hkj^;eD1@Gcn0
-Z36 !s105 sdb_sv_unit
-Z37 !s108 1322076256.870832
-Z38 !s107 ../src/sdb.sv|
-Z39 !s90 +acc|../src/sdb.sv|
+R19
+Z69 !s100 <=Cg=<`n2hkj^;eD1@Gcn0
+Z70 !s105 sdb_sv_unit
+Z71 !s108 1322076256.870832
+Z72 !s107 ../src/sdb.sv|
+Z73 !s90 +acc|../src/sdb.sv|
 !s85 0
 vsdb_inner
-R7
-Z40 IA7GQBMC8Ad=z<Cb;>ENM:1
-Z41 Ve4Dz3hb65[:aYXE0jfU8z2
+R11
+Z74 IA7GQBMC8Ad=z<Cb;>ENM:1
+Z75 Ve4Dz3hb65[:aYXE0jfU8z2
 S1
-R10
-Z42 w1322076890
-Z43 8../src/sdb-inner.sv
-Z44 F../src/sdb-inner.sv
-L0 2
 R14
+Z76 w1322076890
+Z77 8../src/sdb-inner.sv
+Z78 F../src/sdb-inner.sv
+L0 2
+R18
 r1
 31
-Z45 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-Z46 !s105 sdb2dinner_sv_unit
-Z47 !s100 DMm:hn]TS0LT79eCGFj<]2
-Z48 !s108 1322076914.879688
-Z49 !s107 ../src/sdb-inner.sv|
-Z50 !s90 -reportprogress|300|../src/sdb-inner.sv|
+Z79 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z80 !s105 sdb2dinner_sv_unit
+Z81 !s100 DMm:hn]TS0LT79eCGFj<]2
+Z82 !s108 1322076914.879688
+Z83 !s107 ../src/sdb-inner.sv|
+Z84 !s90 -reportprogress|300|../src/sdb-inner.sv|
 !s85 0
 vSDB_inner_tb
-R7
-Z51 I2RM24eUSjabnz53?]92la2
-Z52 VY:Hf8<hE`UYFAn4[Gl=981
+R11
+Z85 I2RM24eUSjabnz53?]92la2
+Z86 VY:Hf8<hE`UYFAn4[Gl=981
 S1
-R10
-Z53 w1322077701
-Z54 8SDB_inner_tb.sv
-Z55 FSDB_inner_tb.sv
-L0 1
 R14
-r1
-31
-R45
-Z56 n@s@d@b_inner_tb
-Z57 !s105 SDB_inner_tb_sv_unit
-Z58 !s90 -reportprogress|300|SDB_inner_tb.sv|
-Z59 !s100 ?@?>T2@CgUVX^Xj5z5hfn2
-!s85 0
-Z60 !s108 1322077717.029999
-Z61 !s107 SDB_inner_tb.sv|
-vSDB_tb
-R7
-Z62 IaOHlohl[^;>[`3bZ[TNka0
-Z63 V]Ok]FD^3S4GE]z`5VDRo03
-S1
-R6
-Z64 w1320516837
-Z65 8SDB_tb.sv
-Z66 FSDB_tb.sv
+Z87 w1322077701
+Z88 8SDB_inner_tb.sv
+Z89 FSDB_inner_tb.sv
 L0 1
-Z67 OL;L;10.0c;49
+R18
 r1
 31
-R15
-Z68 n@s@d@b_tb
-Z69 !s100 P>BfiAHW27fQKRhk7a7L62
-Z70 !s105 SDB_tb_sv_unit
-Z71 !s108 1320519216.668647
-Z72 !s107 SDB_tb.sv|
-Z73 !s90 +acc|SDB_tb.sv|
+R79
+Z90 n@s@d@b_inner_tb
+Z91 !s105 SDB_inner_tb_sv_unit
+Z92 !s90 -reportprogress|300|SDB_inner_tb.sv|
+Z93 !s100 ?@?>T2@CgUVX^Xj5z5hfn2
+Z94 !s108 1322077717.029999
+Z95 !s107 SDB_inner_tb.sv|
+!s85 0
+vSDB_tb
+R11
+Z96 IaOHlohl[^;>[`3bZ[TNka0
+Z97 V]Ok]FD^3S4GE]z`5VDRo03
+S1
+R7
+Z98 w1320516837
+Z99 8SDB_tb.sv
+Z100 FSDB_tb.sv
+L0 1
+Z101 OL;L;10.0c;49
+r1
+31
+R19
+Z102 n@s@d@b_tb
+Z103 !s100 P>BfiAHW27fQKRhk7a7L62
+Z104 !s105 SDB_tb_sv_unit
+Z105 !s108 1320519216.668647
+Z106 !s107 SDB_tb.sv|
+Z107 !s90 +acc|SDB_tb.sv|
 !s85 0

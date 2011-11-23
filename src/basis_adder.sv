@@ -15,8 +15,8 @@ module basis_adder # (parameter width = 8)
    // c1 représente l'étape dans le calcul, out1/2 représente l'indice des retenues
    logic 	   c_out1_in0,c_out2_in0,c_out1_in1,c_out2_in1;
 
-   sdb #(width) sdb_carry_in0(.c_in(0),.a(a),.b(b),.p(p),.s1(s_in0),.s2(s_invert_in0),.c_out1(c_out1_in0),.c_out2(c_out2_in0));
-   sdb #(width) sdb_carry_in1(.c_in(1),.a(a),.b(b),.p(p),.s1(s_in1),.s2(s_invert_in1),.c_out1(c_out1_in1),.c_out2(c_out2_in1));
+   sdb #(width) sdb_carry_in0(.c_in(1'b0),.a(a),.b(b),.p(p),.s1(s_in0),.s2(s_invert_in0),.c_out_1(c_out1_in0),.c_out_2(c_out2_in0));
+   sdb #(width) sdb_carry_in1(.c_in(1'b1),.a(a),.b(b),.p(p),.s1(s_in1),.s2(s_invert_in1),.c_out_1(c_out1_in1),.c_out_2(c_out2_in1));
 
 /********************************************************************************************************************
  *******************************************************************************************************************

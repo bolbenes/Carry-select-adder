@@ -33,7 +33,7 @@ module duplicated_carry_select_adder_64b
 
 //////////// ETAGE 1 ////////////////
 
-   sdb #(8) sdb_1(.c_in(0),.a(a[7:0]),.b(b[7:0]),.p(p[7:0]),.s1(s[7:0]),.s2(s_invert[7:0]),.c_out1(c1_out1),.c_out2(c1_out2));
+   sdb #(8) sdb_1(.c_in(1'b0),.a(a[7:0]),.b(b[7:0]),.p(p[7:0]),.s1(s[7:0]),.s2(s_invert[7:0]),.c_out_1(c1_out1),.c_out_2(c1_out2));
 
    //////// ETAGE 2 /////////////
 
