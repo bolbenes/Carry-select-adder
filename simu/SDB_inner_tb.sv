@@ -10,9 +10,7 @@ module SDB_inner_tb;
    
    logic [width-1:0] expected_sum;
    
-   sdb_inner #(width) I_SDB_INNER_1 (.a(a),.b(b),.p(p),.c_in(c_in),.c_out(c_out_1),.s(s1));
-   sdb_inner #(width) I_SDB_INNER_2 (.a(a),.b(b),.p(p),.c_in(c_in),.c_out(c_out_2),.s(s2));
-	
+   sdb I_SDB #(width) (.a(a), .b(b), .c_in(c_in), .c_out_1(c_out_1), .c_out_2(c_out_2), .p(p), .s1(s1), .s2(s2));
 	initial
 		begin
 			a=$random();
