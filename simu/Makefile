@@ -1,6 +1,6 @@
 MODULES = fra-basic-bl-a.sv fra-basic-bl-b.sv sdb-inner.sv sdb.sv
-CMODULES = $(patsubst %.sv,.%.compiled,$(MODULES))
-CURRENT_TB =
+CMODULES = $(patsubst %.sv,.%.compiled,$(MODULES)$(CURRENT_TB))
+CURRENT_TB = SDB_inner_tb.sv
 
 VPATH = ../src 
 

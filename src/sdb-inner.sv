@@ -1,16 +1,27 @@
 // parameter width has to be even and bigger than 2
 module sdb_inner # (parameter width = 8) 
    (input c_in,
-    input a[0:width-1],
-    input b[0:width-1],
-    input p[0:width-1],
-    output s[0:width-1],
+    input a[width-1:0],
+    input b[width-1:0],
+    input p[width-1:0],
+    output s[width-1:0],
     output c_out);
 
-   logic [0:width/2+1] c1, c2;
-   logic [0:width/2] c3,c4;
+	logic a_i[0:width-1];
+	logic b_i[0:width-1];
+    logic p_i[0:width-1];
+    logic s_i[0:width-1];
+   
+	logic [0:width/2+1] c1, c2;
+	logic [0:width/2] c3,c4;
 
-      
+    /*for(int i=0, i<width; i++);
+		begin
+			s[i]=s_i[i];
+			a_i[i] = a[i];
+			b_i[i] = b[i];
+			p_i[i] = p[i];
+		end*/
    
    assign c1[0] = c_in;
    assign c2[0] = c_in;
