@@ -1,8 +1,10 @@
-MODULES = 
-CMODULES = $(pathsubst %.sv .%.compiled, $(MODULES))
-CURRENT_TB = 
+MODULES = fra-basic-bl-a.sv fra-basic-bl-b.sv sdb-inner.sv sdb.sv
+CMODULES = $(patsubst %.sv,.%.compiled,$(MODULES))
+CURRENT_TB =
 
-sim : compile | work
+VPATH = ../src 
+
+sim : compile
 
 	vsim $(CURRENT_TB)
 
@@ -11,7 +13,7 @@ work :
 
 compile : $(CMODULES)
 
-.%.compile : %.sv
+.%.compiled : %.sv | work
 	vlog +acc $< && touch $@
 
 clean :
