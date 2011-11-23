@@ -4,7 +4,7 @@ module SDB_inner_tb;
    logic [width-1:0] a;
    logic [width-1:0] b;
    logic [width-1:0] p;
-   logic [width-1:0] s;
+   logic [width-1:0] s1, s2;
    logic c_in;
    logic c_out_1, c_out_2;
    
