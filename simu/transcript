@@ -1,4 +1,4 @@
-# //  ModelSim SE-64 10.0c Jul 21 2011 Linux 2.6.32-5-amd64
+# //  ModelSim SE-64 10.0d Oct 30 2011 Linux 2.6.32-5-amd64
 # //
 # //  Copyright 1991-2011 Mentor Graphics Corporation
 # //  All Rights Reserved.
@@ -7,4 +7,30 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
+# vsim SDB_inner_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.SDB_inner_tb(fast)
+# Loading work.sdb_inner(fast)
+# Loading work.fra_basic_bl_a(fast)
+# Loading work.fra_basic_bl_b(fast)
+# ** Error: (vsim-3906) SDB_inner_tb.sv(13): Connection type is incompatible with port (a):  Can't mix packed and unpacked types.
+#         Region: /SDB_inner_tb/I_SDB_INNER_1
+# ** Error: (vsim-3906) SDB_inner_tb.sv(13): Connection type is incompatible with port (b):  Can't mix packed and unpacked types.
+#         Region: /SDB_inner_tb/I_SDB_INNER_1
+# ** Error: (vsim-3906) SDB_inner_tb.sv(13): Connection type is incompatible with port (p):  Can't mix packed and unpacked types.
+#         Region: /SDB_inner_tb/I_SDB_INNER_1
+# ** Error: (vsim-3906) SDB_inner_tb.sv(13): Connection type is incompatible with port (s):  Can't mix packed and unpacked types.
+#         Region: /SDB_inner_tb/I_SDB_INNER_1
+# ** Error: (vsim-3906) SDB_inner_tb.sv(14): Connection type is incompatible with port (a):  Can't mix packed and unpacked types.
+#         Region: /SDB_inner_tb/I_SDB_INNER_2
+# ** Error: (vsim-3906) SDB_inner_tb.sv(14): Connection type is incompatible with port (b):  Can't mix packed and unpacked types.
+#         Region: /SDB_inner_tb/I_SDB_INNER_2
+# ** Error: (vsim-3906) SDB_inner_tb.sv(14): Connection type is incompatible with port (p):  Can't mix packed and unpacked types.
+#         Region: /SDB_inner_tb/I_SDB_INNER_2
+# ** Error: (vsim-3906) SDB_inner_tb.sv(14): Connection type is incompatible with port (s):  Can't mix packed and unpacked types.
+#         Region: /SDB_inner_tb/I_SDB_INNER_2
+# Error loading design
 #  
+# Break key hit 
+# Break key hit 

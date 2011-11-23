@@ -7,13 +7,16 @@ module sdb_inner # (parameter width = 8)
     output s[width-1:0],
     output c_out);
 
-	logic a_i[0:width-1];
-	logic b_i[0:width-1];
-    logic p_i[0:width-1];
-    logic s_i[0:width-1];
+   logic   a_i[0:width-1];
+   logic   b_i[0:width-1];
+   logic   p_i[0:width-1];
+   logic   s_i[0:width-1];
    
-	logic [0:width/2+1] c1, c2;
-	logic [0:width/2] c3,c4;
+   logic   c1[0:width/2+1];
+   logic   c2[0:width/2+1];
+   logic   c3[0:width/2];
+   logic   c4[0:width/2+1];
+   
 
     /*for(int i=0, i<width; i++);
 		begin
@@ -31,8 +34,8 @@ module sdb_inner # (parameter width = 8)
    generate
       for(i=0; i<width; i=i+2)
 	begin
-	   fra_basic_bl_a i_fra_basic_bl_a[i] (.a(a[i]), .b(b[i]), .p(p[i]), .c1(c1[i/2]), .c2(c2[i/2]), .c3(c3[i/2]), .c4(c4[i/2]), .s(s[i]));
-	   fra_basic_bl_b i_fra_basic_bl_b[i] (.a(a[i+1]), .b(b[i+1]), .p(p[i+1]), .c1(c1[i/2+1]), .c2(c2[i/2+1]), .c3(c3[i/2]), .c4(c4[i/2]), .s(s[i+1]));
+	   fra_basic_bl_a i_fra_basic_bl_a (.a(a[i]), .b(b[i]), .p(p[i]), .c1(c1[i/2]), .c2(c2[i/2]), .c3(c3[i/2]), .c4(c4[i/2]), .s(s[i]));
+	   fra_basic_bl_b i_fra_basic_bl_b (.a(a[i+1]), .b(b[i+1]), .p(p[i+1]), .c1(c1[i/2+1]), .c2(c2[i/2+1]), .c3(c3[i/2]), .c4(c4[i/2]), .s(s[i+1]));
 	end
    endgenerate
    assign c_out = c1[width/2+1] & c2[width/2+1];
