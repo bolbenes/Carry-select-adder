@@ -1,4 +1,4 @@
-MODULES = fra-basic-bl-a.sv fra-basic-bl-b.sv sdb-inner.sv sdb.sv
+MODULES = duplicated_carry_select_adder_64b.sv basis_adder.sv fra-basic-bl-a.sv fra-basic-bl-b.sv sdb-inner.sv sdb.sv
 CMODULES = $(patsubst %.sv,.%.compiled,$(MODULES))
 CURRENT_TB =
 
