@@ -1,4 +1,3 @@
-import java.awt.font.NumericShaper;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
@@ -8,7 +7,7 @@ public class Main {
 	/**
 	 * @param args
 	 *            first argument: number of bits for the adder (at least 4,
-	 *            default 64)
+	 *            default 64, maximum 128)
 	 */
 	public static void main(String[] args) {
 		int numberOfBits;
@@ -113,6 +112,56 @@ public class Main {
 				bits_handled+=2*current_block_size;
 				current_block_size+=2;
 			}
+			writeLine(fw, "");
+			writeLine(fw, "endmodule");
+		} catch (IOException e) {
+			System.err.println("Couldn't write / create file");
+		} finally {
+			if (fw != null)
+				try {
+					fw.close();
+				} catch (IOException e) {
+				}
+		}
+		
+		fileName = "adder" + numberOfBits
+				+ "_tb.sv";
+		
+		// Génération du testbench
+		
+		try {
+			fw = new FileWriter(fileName);
+			writeLine(fw, "module adder"+numberOfBits+"_tb;");
+			writeLine(fw, "   localparam width = "+numberOfBits+";");
+			writeLine(fw, "   logic [width-1:0] a,b;");
+			writeLine(fw, "   logic 	     pa,pb;");
+			writeLine(fw, "   logic [width-1:0] s1, s2;");
+			writeLine(fw, "   logic 	     papb,pab;");
+			writeLine(fw, "   logic [width:0] expected_sum;");
+			writeLine(fw, "");
+			writeLine(fw, "   duplicated_carry_select_adder_"+numberOfBits+" I_duplicated_carry_select_adder_"+numberOfBits+" (.a(a), .b(b), .pa(pa), .pb(pb), .s(s1), .s_invert(s2), .papb(papb), .pab(pab));");
+			writeLine(fw, "	initial");
+			writeLine(fw, "	  begin");
+			writeLine(fw, "	     for(int i=0; i<1000; i++)");
+			writeLine(fw, "	       begin");
+			writeLine(fw, "		  a=$random();");
+			writeLine(fw, "		  b=$random();");
+			writeLine(fw, "		  pa=a[0];");
+			writeLine(fw, "		  pb=b[0];");
+			writeLine(fw, "		  for(int i=1; i<width; i++)");
+			writeLine(fw, "			begin");
+			writeLine(fw, "				pa=pa^a[i];");
+			writeLine(fw, "				pb=pb^b[i];");
+			writeLine(fw, "			end");
+			writeLine(fw, "		  expected_sum = a+b;");
+			writeLine(fw, "		  #1;");
+			writeLine(fw, "");
+			writeLine(fw, "		  assert (s1 == ~s2)");
+			writeLine(fw, "		    else $display(\"ERROR : les sommes ne sont pas inversé\\n\");");
+			writeLine(fw, "		  assert(s1 == expected_sum[width-1:0])");
+			writeLine(fw, "		    else $display(\"ERROR : les sommes n'ont pas la bonne valeur\\n\");");
+			writeLine(fw, "	       end // for (int i=0; i<1000; i++)");
+			writeLine(fw, "	  end");
 			writeLine(fw, "");
 			writeLine(fw, "endmodule");
 		} catch (IOException e) {
