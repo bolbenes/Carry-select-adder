@@ -11,8 +11,8 @@ module adder64_tb;
 	  begin
 	     for(int i=0; i<1000; i++)
 	       begin
-		  a=$random();
-		  b=$random();
+		  a={$random(),$random(),$random(),$random()};
+		  b={$random(),$random(),$random(),$random()};
 		  pa=a[0];
 		  pb=b[0];
 		  for(int i=1; i<width; i++)
