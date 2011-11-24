@@ -12,7 +12,7 @@ module adder64bit_tb;
    
    logic [width:0] expected_sum;
    
-   duplicated_carry_select_adder_64b I_duplicated_carry_select_adder_64b (.a(a), .b(b), .pa(pa), .pb(pb), .s(s1), .s_invert(s2), .papb(papb), .pab(pab));
+   duplicated_carry_select_adder_64 I_duplicated_carry_select_adder_64 (.a(a), .b(b), .pa(pa), .pb(pb), .s(s1), .s_invert(s2), .papb(papb), .pab(pab));
 	initial
 	  begin
 	     for(int i=0; i<1000; i++)
