@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 		int numberOfBits;
 		if (args.length==0) {
-			numberOfBits = 60;
+			numberOfBits = 64;
 		} else {
 			numberOfBits = Integer.parseInt(args[0]);
 		}
@@ -98,13 +98,13 @@ public class Main {
 					int upperborder=bits_handled+2*current_block_size-1;
 					int lowerborder=bits_handled+current_block_size;
 					int k = i+1;
-					writeLine(fw, "   basis_adder #(" + current_block_size + ") adder_"+i+"(.a(a["+upperborder+":"+lowerborder+"]), .b(b["+upperborder+":"+lowerborder+"]), .p(p["+upperborder+":"+lowerborder+"]), .c_in1(c_out1["+ i +"]), .c_in2(c_out2["+ i +"]), .s(s["+upperborder+":"+lowerborder+"]), .s_invert(s_invert["+upperborder+":"+lowerborder+"]), .c_out1(c_out1["+k+"]), .c_out2(c_out2["+k+"]));");
+					writeLine(fw, "   basis_adder #(" + current_block_size + ") adder_"+k+"(.a(a["+upperborder+":"+lowerborder+"]), .b(b["+upperborder+":"+lowerborder+"]), .p(p["+upperborder+":"+lowerborder+"]), .c_in1(c_out1["+ i +"]), .c_in2(c_out2["+ i +"]), .s(s["+upperborder+":"+lowerborder+"]), .s_invert(s_invert["+upperborder+":"+lowerborder+"]), .c_out1(c_out1["+k+"]), .c_out2(c_out2["+k+"]));");
 				} else if(numberOfBits-bits_handled > 0){
 					int upperborder=numberOfBits-1;
 					int lowerborder=bits_handled+current_block_size;
 					int k = i+1;
 					int width = numberOfBits-bits_handled-current_block_size;
-					writeLine(fw, "   basis_adder #(" + width + ") adder_"+i+"(.a(a["+upperborder+":"+lowerborder+"]), .b(b["+upperborder+":"+lowerborder+"]), .p(p["+upperborder+":"+lowerborder+"]), .c_in1(c_out1["+ i +"]), .c_in2(c_out2["+ i +"]), .s(s["+upperborder+":"+lowerborder+"]), .s_invert(s_invert["+upperborder+":"+lowerborder+"]), .c_out1(c_out1["+k+"]), .c_out2(c_out2["+k+"]));");
+					writeLine(fw, "   basis_adder #(" + width + ") adder_"+k+"(.a(a["+upperborder+":"+lowerborder+"]), .b(b["+upperborder+":"+lowerborder+"]), .p(p["+upperborder+":"+lowerborder+"]), .c_in1(c_out1["+ i +"]), .c_in2(c_out2["+ i +"]), .s(s["+upperborder+":"+lowerborder+"]), .s_invert(s_invert["+upperborder+":"+lowerborder+"]), .c_out1(c_out1["+k+"]), .c_out2(c_out2["+k+"]));");
 					break;
 				}
 				else{
