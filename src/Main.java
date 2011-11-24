@@ -144,8 +144,8 @@ public class Main {
 			writeLine(fw, "	  begin");
 			writeLine(fw, "	     for(int i=0; i<1000; i++)");
 			writeLine(fw, "	       begin");
-			writeLine(fw, "		  a=$random();");
-			writeLine(fw, "		  b=$random();");
+			writeLine(fw, "		  a={$random(),$random(),$random(),$random()};");
+			writeLine(fw, "		  b={$random(),$random(),$random(),$random()};");
 			writeLine(fw, "		  pa=a[0];");
 			writeLine(fw, "		  pb=b[0];");
 			writeLine(fw, "		  for(int i=1; i<width; i++)");
